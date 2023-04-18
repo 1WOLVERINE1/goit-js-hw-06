@@ -6,10 +6,14 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
-for (const ingredient of ingredients) {
-  const listRef = document.getElementById("ingredients");
+
+const listRef = document.getElementById("ingredients");
+
+const liItemEL = ingredients.map((ingredient) => {
   const itemRef = document.createElement("li");
   itemRef.textContent = ingredient;
   itemRef.classList.add("item");
-  listRef.append(itemRef);
-}
+  return itemRef;
+});
+
+listRef.append(...liItemEL);
