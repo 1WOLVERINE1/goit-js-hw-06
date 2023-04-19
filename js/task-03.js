@@ -15,11 +15,14 @@ const images = [
 
 const listRef = document.querySelector(".gallery");
 listRef.style.display = "flex";
-listRef.style.gap = "10px";
+listRef.style.gap = "30px";
+listRef.style.listStyle = "none";
 const markup = images
   .map(
     (image) =>
-      `<li><img class = "img" src=${image.url} alt=${image.alt} width="340" height="340"></img></li>`
+      `<li class = "item"><img class = "img" src=${image.url} alt=${image.alt} width="340" height="340"></img></li>`
   )
   .join("");
 listRef.insertAdjacentHTML("beforeend", markup);
+// const itemRef = document.querySelector(".item");
+// itemRef.style.

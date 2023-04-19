@@ -11,5 +11,5 @@ formRef.addEventListener("submit", (event) => {
     return alert("Всі поля мають бути заповнені!");
   }
   console.log(elements);
-  form.reset();
+  formRef.reset();
 });
